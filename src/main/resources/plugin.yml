@@ -1,0 +1,39 @@
+name: chatsystem
+version: ${version}
+main: org.steve.chatsystem.ChatSystem
+api-version: '1.21'
+authors: [ Stevobert ]
+description: A full chatsystem with all features you would ever need
+commands:
+  chatsystem:
+    description: ChatSystem command
+    usage: /chatsystem <reload|ver>
+    aliases: cs
+    permission: chatsystem.command.chatsystem
+  staffchat:
+    description: Toggle the staffchat or send a message to staffchat
+    usage: /staffchat [message]
+    aliases: sc
+    permission: chatsystem.command.staffchat
+  adminchat:
+    description: Toggle the adminchat or send a message to adminchat
+    usage: /adminchat [message]
+    aliases: ac
+    permission: chatsystem.command.adminchat
+  clearchat:
+    description: Clears the chat for everyone
+    usage: /clearchat
+    aliases: cc
+    permission: chatsystem.command.clearchat
+  mutechat:
+    description: Mutes the whole chat
+    usage: /mutechat
+    permission: chatsystem.command.mutechat
+  togglepings:
+    description: Toggles ping notifications on and off
+    usage: /togglepings
+    permission: chatsystem.command.togglepings
+  chatcolor:
+    description: Change the chatcolor of a player
+    usage: /chatcolor <player> <color|#default|#gradient|#hex|#style> [colors|styles]
+    permission: chatsystem.command.chatcolor

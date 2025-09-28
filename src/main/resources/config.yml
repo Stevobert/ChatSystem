@@ -1,0 +1,164 @@
+# This file is part of the ChatSystem plugin made by Stevobert
+
+############################################################
+# +------------------------------------------------------+ #
+# |                  ChatSystem Config                   | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Both legacy formatting and minimessage formatting should be
+# supported everywhere. If not it is a bug.
+# PlaceholderAPI is supported where stated.
+
+# === Chat format ===
+chat-format:
+  # Simple chat format
+  # Prefix in front of player's name.
+  # PlaceholderAPI is supported.
+  prefix: "%luckperms_prefix%"
+  # Suffix after the player's name.
+  # PlaceholderAPI is supported.
+  suffix: "%luckperms_suffix%"
+  # Delimiter between the prefix/name/suffix part and the message.
+  arrow: "&f: "
+
+  # Custom chat format
+  enable-custom: false
+  # PlaceholderAPI is supported.
+  custom: "%luckperms_prefix%%player_name%%luckperms_suffix%&f: "
+
+# === Default chat color and style ===
+default:
+  # Default chat is used for everyone whose chat color is set to default.
+  # For gradients use the minimessage <gradient:#rrggbb:#rrggbb> format
+  # otherwise use 0-9, a-f or "rrggbb" for hex colors.
+  default-color: "7"
+  # Default style/formatting
+  default-magic: false
+  default-bold: false
+  default-strikethrough: false
+  default-underlined: false
+  default-italic: false
+
+# === Staff chat and Admin chat ===
+staff-chat:
+  # Prefix used on staff chat messages.
+  prefix: "&b[STAFF-CHAT]"
+  # Custom staff chat format
+  # If disabled it uses the normal chat format specified above.
+  enable-custom: false
+  # PlaceholderAPI is supported.
+  custom: "&f%player_name%: "
+admin-chat:
+  # Prefix used on admin chat messages
+  prefix: "&6[ADMIN-CHAT]"
+  # Custom admin chat format
+  # If disabled it uses the normal chat format specified above.
+  enable-custom: false
+  # PlaceholderAPI is supported.
+  custom: "&f%player_name%: "
+
+# === Sounds ===
+sounds:
+  # Sound played when pinged by another player.
+  ping:
+    sound: "ENTITY.ARROW_HIT.PLAYER"
+    volume: 1.0
+    pitch: 1.0
+  # Sound played when clicking a gui buttons succeeds.
+  click-success:
+    sound: "BLOCK.DECORATED_POT.INSERT"
+    volume: 1.0
+    pitch: 1.3
+  # Sound played when clicking a gui buttons fails.
+  click-fail:
+    sound: "ITEM.SHIELD.BREAK"
+    volume: 1.0
+    pitch: 1.0
+
+# === General feature options ===
+options:
+  # Chat cooldown options
+  cooldown:
+    # Whether the chat-cooldown should be checked at all.
+    enable-chat-cooldown: true
+    # Time someone needs to wait to send another message in seconds.
+    cooldown-time: 2
+  # Whether duplicated messages should be blocked.
+  enable-no-duplicate-messages: true
+  # Whether the target of a chat color change should be notified.
+  enable-chatcolor-command-target-feedback: true
+
+# === Color & Style preview ===
+preview:
+  # Color/style preview string (Example: "This (&f)"), used for the chat color command feedback.
+  # enable/disable the style/formatting info
+  enable-style: true
+  # enable/disable the color info
+  enable-color: true
+
+# === Ping ===
+ping:
+  # When a player pings another player.
+  normal:
+    # Customize the replacement
+    enable-custom: false
+    # Use the %pinged% placeholder for the pinged player's name.
+    custom: "&r&e%pinged%"
+  # When a player pings everyone
+  everyone:
+    # Customize the "@everyone" ping
+    enable-custom: false
+    # What gets replaced for the "@everyone" ping.
+    replace-phrase: "@everyone"
+    # What the replace-phrase gets replaced with.
+    replacement: "&r&e@everyone"
+
+# === Messages ===
+messages:
+  # When the console tries to execute a command that only players can use.
+  console-command-error: "&cOnly players can use this command!"
+
+  admin-chat:
+    # Use the %prefix% placeholder for the admin chat prefix specified above.
+    enable: "%prefix% &aEnabled"
+    disable: "%prefix% &cDisabled"
+
+  staff-chat:
+    # Use the %prefix% placeholder for the staff chat prefix specified above.
+    enable: "%prefix% &aEnabled"
+    disable: "%prefix% &cDisabled"
+
+  mute-chat:
+    # Use the %name% placeholder for the name of the command sender.
+    mute: "&fThe chat has been &cmuted &fby %name%"
+    unmute: "&fThe chat has been &aunmuted &fby %name%"
+
+  clear-chat:
+    # Use the %name% placeholder for the name of the command sender.
+    clear-chat: "\n&cThe chat has been cleared by &4%name%\n "
+
+  toggle-pings:
+    enable: "&fPings &aEnabled"
+    disable: "&fPings &cDisabled"
+
+  chat-send-errors:
+    # Use the %time% placeholder to get the cooldown-time specified above.
+    message-cooldown: "&cYou need to wait %time% seconds between every message!"
+    # When a player tries to send the same message twice.
+    duplicated-message: "&cYou can not send the same message twice!"
+    # When a player tries to send a message while the chat is muted.
+    chat-is-muted: "&cThe chat is currently muted!"
+
+  chatcolor-command:
+    # Use the %name% placeholder to get the target's name.
+    # Use the %preview% placeholder for the color/style preview string.
+    update-chatcolor-sender: "&7You have set &f%name%'s &7chatcolor to: %preview%"
+
+    # Use the %preview% placeholder for the color/style preview string.
+    update-chatcolor-target: "&7Your chatcolor has been set to: %preview%"
+
+# === Version ===
+# DO NOT CHANGE THIS MANUALLY
+# This is to update the config when a new plugin version is released.
+version: 1.0
