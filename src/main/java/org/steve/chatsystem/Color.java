@@ -28,6 +28,7 @@ public class Color {
     }
 
     public static Component colored(String string) {
+        string = string.replaceAll("§", "&");
         Component legacy = Color.legacyColored(string);
         String minimessage = MiniMessage.miniMessage().serialize(legacy).replace("\\", "");
         return MiniMessage.miniMessage().deserialize(minimessage);

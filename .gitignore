@@ -1,9 +1,9 @@
 .idea/
-run/
-*.iml
-out/
+.gradle/
 target/
 build/
+run/
+out/
+*.iml
 *.log
 *.log.gz
-
